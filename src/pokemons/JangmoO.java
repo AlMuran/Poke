@@ -1,8 +1,9 @@
+package pokemons;
 import attacks.*;
 import ru.ifmo.se.pokemon.*;
 
-public final class Jangmo extends Pokemon{
-    public Jangmo(String name, int level){
+public final class JangmoO extends Pokemon{
+    public JangmoO(String name, int level){
         super(name, level);
 
         setType(Type.DRAGON);

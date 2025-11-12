@@ -1,15 +1,22 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import pokemons.*;
+import ru.ifmo.se.pokemon.*;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Battle b = new Battle();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Pokemon[] allies = { new JangmoO("Леди баг", 20),
+                new Ninetales("Супер Кот", 15),
+                new Cleffa("Рена Руж", 17) };
+        Pokemon[] foes = { new Vulpix("Бражник", 19),
+                new Clefairy("Павлин", 16),
+                new Clefable("Хлоя", 17) };
+
+        for (Pokemon p : allies)
+            b.addAlly(p);
+        for (Pokemon f : foes)
+            b.addFoe(f);
+
+        b.go();
     }
 }
